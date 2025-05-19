@@ -1,10 +1,8 @@
-// public/main.js
 document.addEventListener('DOMContentLoaded', () => {
   const searchForm    = document.getElementById('search-form');
   const resultsDiv    = document.getElementById('results');
   const watchlistDiv  = document.getElementById('watchlist');
 
-  // 1️⃣ Load & render watchlist on page load
   async function loadWatchlist() {
     const res  = await fetch('/api/watchlist');
     const list = await res.json();
@@ -14,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2️⃣ Create a movie card (add or remove button)
   function createCard(movie, isWatchlist) {
     const div = document.createElement('div');
     div.className = 'movie-card';
@@ -40,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return div;
   }
 
-  // 3️⃣ Handle the search form
   searchForm.addEventListener('submit', async e => {
     e.preventDefault();
     const title = e.target.title.value.trim();
@@ -59,6 +55,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // initial load
   loadWatchlist();
 });

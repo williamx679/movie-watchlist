@@ -16,4 +16,4 @@ https://youtu.be/gxdxD2cU2jc
 wxu1234@terpmail.umd.edu
 
 **Deployed App Link:**  
-https://[YOUR-RENDER-APP].onrender.com
+https://movie-watchlist-2zmq.onrender.com
